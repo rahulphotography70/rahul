@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Kumar - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .content {
+            flex: 1;
+            order: 1;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .profile-img {
+            flex-shrink: 0;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            order: 2;
+            margin-left: auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .header {
+            margin-bottom: 20px;
+            animation: slideInLeft 1s ease-in-out;
+        }
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            cursor: pointer;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .section h3:hover {
+            color: #2980b9;
+            transform: scale(1.05);
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+            display: none;
+            margin-top: 10px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .section ul li {
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .skills, .languages, .hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills span, .languages span, .hobbies span {
+            background: #2c3e50;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: transform 0.3s;
+        }
+        .skills span:hover, .languages span:hover, .hobbies span:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section h3');
+
+            sections.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="rahul.jpeg" alt="Rahul Kumar's Photo" class="profile-img">
+        <div class="content">
+            <div class="header">
+                <h1>Rahul Kumar</h1>
+                <h2>Experienced Computer Operator</h2>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>Date of Birth:</strong> 26/11/1995</p>
+                <p><strong>Address:</strong> #1, Near Shitla Mata Mandir, Mehli Gate, Phagwara</p>
+                <p><strong>Location:</strong> Phagwara, India 144401</p>
+                <p><strong>Phone:</strong> +91 9988148841</p>
+                <p><strong>Email:</strong> rahulaery70@gmail.com</p>
+            </div>
+
+            <div class="section">
+                <h3>Summary</h3>
+                <p>Experienced Computer Operator with fast typing speed and exceptional attention to detail. Digitalizes documents and verifies data integrity to maintain accurate records. Applies excellent organization and planning skills to complete tasks on time.</p>
+            </div>
+
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills">
+                    
+                    <span>Workflow Coordination</span>
+                    <span>Data Entry</span>
+                    <span>Adobe Photoshop Editing</span>
+                    <span>Information Management</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Experience</h3>
+                <ul>
+                    <li><strong>Computer Operator</strong> - Trackon Courier Services | Phagwara, India (Sep 2021 - Feb 2022)
+                        <ul>
+                            <li>Managed courier bookings and processed data efficiently.</li>
+                            <li>Built strong relationships with clients and courier partners.</li>
+                            <li>Ensured accurate and timely package delivery.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Photography Studio Manager</strong> - Ramesh Photography | Phagwara, India (Oct 2018 - Apr 2020)
+                        <ul>
+                            <li>Delivered high-quality photography services independently.</li>
+                            <li>Organized events and workshops to boost brand visibility.</li>
+                            <li>Adapted services to stay competitive in the market.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Manager</strong> - Trehan Aluminium Decorators | Phagwara, India (Aug 2017 - May 2018)
+                        <ul>
+                            <li>Directed daily operations and ensured efficient task execution.</li>
+                            <li>Implemented quality assurance measures and monitored workforce activities.</li>
+                            <li>Handled office responsibilities and enhanced team productivity.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Education</h3>
+                <ul>
+                    <li>Post Graduate Diploma in Computer Applications - Guru Nanak College, Phagwara (2020)</li>
+                    <li>Bachelor of Arts in Computer Applications & Economics - Guru Nanak College, Phagwara (2016)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Languages</h3>
+                <div class="languages">
+                    <span>Punjabi: Proficient</span>
+                    <span>Hindi: Proficient</span>
+                    <span>English: Elementary</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Hobbies & Interests</h3>
+                <div class="hobbies">
+                    <span>Exploring new topics</span>
+                    <span>Music</span>
+                    <span>Driving</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
